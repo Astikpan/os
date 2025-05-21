@@ -1,0 +1,150 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image:url(b3.jpg);
+  background-size: cover;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #0078d7;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header button {
+  background: white;
+  color: #0078d7;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background-color: pink;
+  transform: translateY(-10px);
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Form and Controls */
+form, select, input {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+input[type="text"], input[type="number"], select {
+  width: 180px;
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: grey;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+/* Gantt Chart Styling */
+.gantt {
+  display: flex;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.gantt div {
+  padding: 0.5rem;
+  min-width: 100px;
+  margin-right: 2px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #0078d7;
+  position: relative;
+}
+
+/* Theory Section */
+#theorySection p {
+  background-color: grey;
+  padding: 1rem;
+  border-left: 5px solid #03a9f4;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Dark Mode Support */
+body.dark {
+  background-color: #121212;
+  color: #ddd;
+}
+
+body.dark header {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+body.dark header button {
+  background: #333;
+  color: white;
+}
+
+body.dark table {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark input,
+body.dark select {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark .gantt div {
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark #theorySection p {
+  background: #263238;
+  border-color: #00bcd4;
+}

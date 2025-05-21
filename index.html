@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CPU Scheduling Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>CPU Scheduling Simulator</h1>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <button onclick="exportToPDF()">Export to PDF</button>
+  </header>
+
+  <main>
+    <section>
+      <form id="processForm">
+        <input type="text" id="pid" placeholder="Process ID" required />
+        <input type="number" id="arrivalTime" placeholder="Arrival Time" required />
+        <input type="number" id="burstTime" placeholder="Burst Time" required />
+        <input type="number" id="priority" placeholder="Priority (optional)" />
+        <button type="submit">Add Process</button>
+      </form>
+
+      <label for="algorithm">Select Algorithm:</label>
+      <select id="algorithm">
+        <option value="FCFS">FCFS</option>
+        <option value="SJF">SJF</option>
+        <option value="SJF-Preemptive">SJF Preemptive</option>
+        <option value="Priority">Priority</option>
+        <option value="Priority-Preemptive">Priority Preemptive</option>
+        <option value="RR">Round Robin</option>
+      </select>
+      <input type="number" id="quantum" placeholder="Quantum Time" style="display:none;" />
+
+      <button id="run">Run Scheduling</button>
+      <button id="reset" type="button">Reset</button>
+    </section>
+
+    <section id="processTableContainer"></section>
+    <section id="output"></section>
+    <section id="theorySection"></section>
+  </main>
+
+  <!-- Include html2pdf CDN for export feature -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <!-- Link your script file -->
+  <script src="script.js"></script>
+</body>
+</html>
